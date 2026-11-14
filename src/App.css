@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Navigation */
+
+.navbar {
+  background: #172554;
+  color: white;
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Main Container */
+
+.container {
+  padding: 50px 8%;
+}
+
+.container h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #172554;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 35px;
+}
+
+/* Student Cards */
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.student-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  transition: 0.3s;
+}
+
+.student-card:hover {
+  transform: translateY(-7px);
+}
+
+.student-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.student-card h2 {
+  margin-bottom: 12px;
+  color: #1e3a8a;
+}
+
+.student-card p {
+  margin: 10px 0;
+  color: #64748b;
+}
+
+/* Buttons */
+
+button {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.added-btn {
+  background: #16a34a;
+  color: white;
+  cursor: not-allowed;
+}
+
+.remove-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.remove-btn:hover {
+  background: #991b1b;
+}
+
+/* Empty Message */
+
+.empty-message {
+  background: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.empty-message h2 {
+  color: #dc2626;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .container {
+    padding: 30px 5%;
+  }
+}
