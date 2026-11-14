@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { useContext } from "react";
 
 import StudentList from "./pages/StudentList";
 import FavouriteStudents from "./pages/FavouriteStudents";
@@ -7,8 +8,6 @@ import {
   StudentProvider,
   StudentContext
 } from "./context/StudentContext";
-
-import { useContext } from "react";
 
 import "./App.css";
 
@@ -33,7 +32,7 @@ function Navigation() {
 function App() {
   return (
     <StudentProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/-Favourite-Student-List-React">
         <Navigation />
 
         <Routes>
